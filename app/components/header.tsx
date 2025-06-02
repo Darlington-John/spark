@@ -45,7 +45,7 @@ const Header = () => {
     setOverlayOpen(!overlayOpen);
   };
   return (
-    <nav className="flex items-center justify-between  fixed top-8 left-0 z-[50] w-full max-px-[66px]   py-2  max-lg:px-5 max-md:top-4  max-xs:top-0   max-4xl:px-[200px]  ">
+    <nav className="flex items-center justify-between  fixed top-8 left-0 z-[50] w-full    py-2  max-2xl:px-5 max-md:top-4  max-xs:top-0   px-[200px]  max-w-[1600px]  4xl:left-1/2     4xl:transform  4xl:-translate-x-1/2   ">
       <button
         className="hidden max-md:flex items-center justify-center text-white  text-2xl  h-8 w-8  rounded-md backdrop-blur-lg  bg-[#a29f9417]"
         onClick={handleToggleOverlay}

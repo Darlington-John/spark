@@ -18,6 +18,17 @@ const Overlay = () => {
 
     setOverlayOpen(false);
   }, [linkname, setOverlayOpen]);
+
+  const closeOverlay = () => {
+    const overlayElement = document.getElementById("overlay");
+
+    if (!overlayElement) {
+      return;
+    }
+    overlayElement.style.transform = "translateX(100%)";
+
+    setOverlayOpen(false);
+  };
   const features = [
     {
       id: 1,
@@ -57,13 +68,17 @@ const Overlay = () => {
               href={feat.link}
               className="border-b-1  border-b-[#1e1e1e] overflow-hidden text-base border-b  w-full flex  flex-col py-3 text-[#f5f5f5]"
               key={feat.id}
+              onClick={closeOverlay}
             >
               {feat.feature}
             </Link>
           ))}
         </div>
         <Link href="/login" className="w-full">
-          <button className="rounded-md  bg-[#1e1e1e] text-white text-[22px]  py-4 text-center max-xs:text-base max-xs:py-2 w-full hover:bg-white  hover:text-black">
+          <button
+            className="rounded-md  bg-[#1e1e1e] text-white text-[22px]  py-4 text-center max-xs:text-base max-xs:py-2 w-full hover:bg-white  hover:text-black"
+            onClick={closeOverlay}
+          >
             Login
           </button>
         </Link>
